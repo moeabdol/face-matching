@@ -4,6 +4,10 @@ shape. In general, if two face descriptor vectors have a Euclidean distance
 between them less than 0.6 then they are from the same person, otherwise they
 are from different people.
 
+![input_example](https://github.com/moeabdol/face-matching/blob/master/example_input.png)
+
+![output_example](https://github.com/moeabdol/face-matching/blob/master/example_output.png)
+
 ## Dependencies
 * python3
 * dlib
