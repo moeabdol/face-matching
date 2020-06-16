@@ -15,4 +15,4 @@ are from different people.
 2. `source .venv/bin/activate`
 3. `pip install --upgrade pip`
 4. `pip install -r requirements.txt`
-5. `python appy.py ./model/shape_predictor_5_face_landmarks.dat ./model/dlib_face_recognition_resnet_model_v1.data ./data/picture1.jpg ./data/picture2.jpg`
+5. `python appy.py ./model/shape_predictor_5_face_landmarks.dat ./model/dlib_face_recognition_resnet_model_v1.dat ./data/picture1.jpg ./data/picture2.jpg`
