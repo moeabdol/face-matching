@@ -7,7 +7,7 @@ import numpy as np
 if len(sys.argv) != 5:
     print(
         "Call this program like this:\n"
-        "   ./app.py shape_predictor_5_face_landmarks.dat dlib_face_recognition_resnet_model_v1.dat ../data/picture1.jpg ../data/picture2.jpg\n")
+        "python app.py shape_predictor_5_face_landmarks.dat dlib_face_recognition_resnet_model_v1.dat ../data/picture1.jpg ../data/picture2.jpg\n")
     exit()
 
 predictor_path = sys.argv[1]
