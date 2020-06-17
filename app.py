@@ -39,7 +39,7 @@ else:
     win1.clear_overlay()
     win1.add_overlay(dets[0])
     win1.add_overlay(shape)
-    face1_descriptor = facerec.compute_face_descriptor(img, shape)
+    face1_descriptor = facerec.compute_face_descriptor(img, shape, 10)
 print()
 
 # Processing second image
@@ -59,7 +59,7 @@ else:
     win2.clear_overlay()
     win2.add_overlay(dets[0])
     win2.add_overlay(shape)
-    face2_descriptor = facerec.compute_face_descriptor(img, shape)
+    face2_descriptor = facerec.compute_face_descriptor(img, shape, 10)
 print()
 
 # Compute euclidean distance
