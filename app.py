@@ -7,7 +7,7 @@ import numpy as np
 if len(sys.argv) != 5:
     print(
         "Call this program like this:\n"
-        "python app.py shape_predictor_5_face_landmarks.dat dlib_face_recognition_resnet_model_v1.dat ../data/picture1.jpg ../data/picture2.jpg\n")
+        "python app.py shape_predictor_68_face_landmarks.dat dlib_face_recognition_resnet_model_v1.dat ../data/picture1.jpg ../data/picture2.jpg\n")
     exit()
 
 predictor_path = sys.argv[1]
@@ -39,7 +39,8 @@ else:
     win1.clear_overlay()
     win1.add_overlay(dets[0])
     win1.add_overlay(shape)
-    face1_descriptor = facerec.compute_face_descriptor(img, shape, 10)
+    face_chip = dlib.get_face_chip(img, shape)
+    face1_descriptor = facerec.compute_face_descriptor(face_chip, 10)
 print()
 
 # Processing second image
@@ -59,7 +60,8 @@ else:
     win2.clear_overlay()
     win2.add_overlay(dets[0])
     win2.add_overlay(shape)
-    face2_descriptor = facerec.compute_face_descriptor(img, shape, 10)
+    face_chip = dlib.get_face_chip(img, shape)
+    face2_descriptor = facerec.compute_face_descriptor(face_chip, 10)
 print()
 
 # Compute euclidean distance
@@ -71,7 +73,7 @@ dist = np.linalg.norm(first_face_vector - second_face_vector)
 print("Euclidean Distance = ", dist)
 print()
 
-if dist < 0.6:
+if dist <= 0.5:
     print("Images are of the same person!")
 else:
     print("Images are of different persons!")
