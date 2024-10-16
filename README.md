@@ -6,9 +6,10 @@ are from different people.
 
 ## Dependencies
 * python3
+* cmake
 * dlib
 * numpy
-* XQuartz
+* XQuartz (on mac)
 
 ## Example Input
 ![input_example](https://github.com/moeabdol/face-matching/blob/master/example_input.png)
